@@ -1,0 +1,70 @@
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+<head>
+<style>
+         table, th , td {
+            border: 1px solid white;
+            border-collapse: collapse;
+         }
+         table tr:nth-child(odd) {
+            background-color: #f2f2f2;
+         }
+        th, td {
+            background-color: #96D4D4;
+         }
+      </style>
+</head>
+<div ng-app="myApp" ng-controller="myController">
+   <form>
+      <table>
+	 <tr>
+            <td>First Name:</td>
+	    <td> <input type="text" ng-model="firstName"></td>
+         </tr>
+         <tr>
+	    <td>Last Name:</td>
+            <td>   <input type="text" ng-model="lastName"></td>
+       </tr>
+        <tr>	
+	   <td> Age:    </td>
+           <td> <input type="number" ng-model="age"></td>
+	</tr>
+	<tr>
+            <td>Email: </td>
+	    <td>      <input type="text" ng-model="email"></td>
+	</tr>
+	<tr>
+	   <td>Address: </td>
+	   <td>    <input type="text" ng-model="address"></td>
+	</tr>
+	<tr>
+	   <td>Profession: </td>
+	   <td> <input type="text" ng-model="profession"></td>
+        </tr>
+     </table>
+   </form>
+<br>
+<b>Full Name:</b>  {{firstName}}<br>
+<b>Last Name:</b>  {{lastName}}<br>
+<b>Age:</b>        {{age}} <br>
+<b>Email:</b>      {{email}}<br>
+<b>Address:</b>    {{address}}<br>
+<b>Profession:</b> {{profession}}
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myController', function($scope) {
+    $scope.firstName = " ";
+    $scope.lastName = " ";
+    $scope.age=" ";
+    $scope.email=" ";
+    $scope.address=" ";
+    $scope.profession=" ";
+});
+</script>
+
+</body>
+</html>

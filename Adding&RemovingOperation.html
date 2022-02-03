@@ -1,0 +1,30 @@
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+
+<script>
+var app = angular.module("CassiniTeam", []); 
+app.controller("myCtrl", function($scope) {
+    $scope.members = ["Raghuram Tera", "Ashok", "Nageshwar","Phani"];
+    $scope.addMember = function () {
+        $scope.members.push($scope.addMe);
+    } 
+   $scope.removeMember = function (x) {
+        $scope.members.splice(x, 1);
+    }   
+});
+</script>
+
+<div ng-app="CassiniTeam" ng-controller="myCtrl">
+  <ul>
+    <li ng-repeat="x in members">{{x}}<span ng-click="removeMember($index)">×</span></li>
+  </ul>
+  <input ng-model="addMe">
+  <button ng-click="addMember()">Add</button>
+</div>
+
+<p style="color:green;">Write in the input field to add members.</p>
+<p style="color:red;" >Click the little x to remove an team member from the team list.</p>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+
+<div ng-app="">
+<form>
+Pick a Language:
+<input type="radio" ng-model="var" value="Angular">Angular
+<input type="radio" ng-model="var" value="CSS">CSS
+<input type="radio" ng-model="var" value="JS">JS
+<input type="radio" ng-model="var" value="HMTL">HTML
+<input type="radio" ng-model="var" value="Spring MVC">Spring MVC
+</form>
+<div ng-switch="var">
+     <div ng-switch-when="Angular">
+          <h1>Angular</h1>
+          <p> Welcome to Angular practice sessions.</p>
+     </div>
+     <div ng-switch-when="CSS">
+          <h1>CSS<h1>
+          <p>Welcome to Cascading Style Sheet practice sessions</p>
+     </div>
+     <div ng-switch-when="JS">
+           <h1>JS</h1>
+          <p>Welcome to JS tutorial</p>
+     </div>
+     <div ng-switch-when="HTML">
+           <h1>HTML</h1>
+           <p>Welcome to HTML tutorial</P>
+    </div>
+    <div ng-switch-when="Spring MVC">
+           <h1>Spring MVC</h1>
+          <p> Welcome to Spring MVC Framework</p>
+     </div>
+
+</div> 
+</div>
+
+
+<H7>HIDE & SHOW DIRECTIVES</H7>
+
+<div ng-app="abcd">
+
+<p>ng-hide directive</p>
+
+<p ng-hide="true">I am not visible.</p>
+<p ng-hide="false">I am visible.</p>
+
+<p>ng-show directive </p>
+
+<p ng-show="false">I am visible.</p>
+<p ng-show="true">I am not visible.</p>
+
+</div>
+
+
+
+</body>
+</html>
